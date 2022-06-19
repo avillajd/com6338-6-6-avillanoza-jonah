@@ -18,6 +18,23 @@ function openClose(e) {
   
 button.onclick = openClose
 
+function backOut (e) {
+    dropDown.classList.remove("show-menu");
+    button.setAttribute ("aria-expanded", false)
+    button.focus()
+}
+
+document.onkeyup = function (e) {
+    if (e.key === 'Escape') {
+        backOut()
+    }
+}
+
+document.body.onclick = function (e) {
+    if (!menu.contains(e.target)){
+        backOut()
+    }
+}
 
 
 
