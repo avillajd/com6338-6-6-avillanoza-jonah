@@ -4,7 +4,6 @@ var dropDown = document.querySelector(".hamburger-menu")
 var menu = document.querySelector(".menu")
 
 // Open and Close Hamburger Menu Function
-
 function openClose(e) {
     dropDown.classList.toggle("show-menu")
     button.focus()
@@ -18,6 +17,7 @@ function openClose(e) {
   
 button.onclick = openClose
 
+// Close functions for the menu 
 function backOut (e) {
     dropDown.classList.remove("show-menu");
     button.setAttribute ("aria-expanded", false)
